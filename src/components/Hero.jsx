@@ -3,16 +3,18 @@ const WHATSAPP_URL =
 
 function Hero() {
   return (
-    <section id="inicio" className="container-base py-14 sm:py-20 lg:py-28">
-      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-navy to-blueGray">
+      <div className="absolute inset-0 bg-navy/35" />
+      <div className="container-base relative py-14 sm:py-20 lg:py-28">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div data-reveal className="reveal">
-          <p className="mb-4 inline-flex rounded-full border border-blueGray/40 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-blueGray">
+          <p className="mb-4 inline-flex rounded-full border border-white/45 bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">
             Odontologia premium
           </p>
-          <h1 className="text-4xl font-semibold tracking-tight text-navy sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Benevere Odontologia
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-grayMedium sm:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
             Sorriso saudável com tecnologia e cuidado em cada detalhe.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -20,27 +22,30 @@ function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="btn-primary"
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide text-navy shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
             >
               Agendar Consulta
             </a>
-            <a href="#servicos" className="btn-outline">
+            <a
+              href="#servicos"
+              className="inline-flex items-center justify-center rounded-full border border-white/70 bg-white/10 px-7 py-3 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+            >
               Conhecer Serviços
             </a>
           </div>
 
           <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
-            <div className="premium-card p-4 text-center">
-              <p className="text-2xl font-bold text-navy">+12</p>
-              <p className="mt-1 text-xs text-grayMedium">Anos de atuação</p>
+            <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
+              <p className="text-2xl font-bold text-white">+12</p>
+              <p className="mt-1 text-xs text-grayLight">Anos de atuação</p>
             </div>
-            <div className="premium-card p-4 text-center">
-              <p className="text-2xl font-bold text-navy">+5 mil</p>
-              <p className="mt-1 text-xs text-grayMedium">Sorrisos cuidados</p>
+            <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
+              <p className="text-2xl font-bold text-white">+5 mil</p>
+              <p className="mt-1 text-xs text-grayLight">Sorrisos cuidados</p>
             </div>
-            <div className="premium-card p-4 text-center">
-              <p className="text-2xl font-bold text-navy">98%</p>
-              <p className="mt-1 text-xs text-grayMedium">Satisfação</p>
+            <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
+              <p className="text-2xl font-bold text-white">98%</p>
+              <p className="mt-1 text-xs text-grayLight">Satisfação</p>
             </div>
           </div>
         </div>
@@ -54,7 +59,7 @@ function Hero() {
               className="h-[370px] w-full rounded-3xl border border-white/80 object-cover shadow-premium sm:h-[460px]"
               loading="lazy"
             />
-            <div className="premium-card absolute bottom-4 left-4 max-w-xs p-4">
+            <div className="absolute bottom-4 left-4 max-w-xs rounded-2xl border border-white/40 bg-white/85 p-4 shadow-premium backdrop-blur">
               <p className="text-sm font-semibold text-navy">Ambiente sofisticado e acolhedor</p>
               <p className="mt-1 text-xs leading-relaxed text-grayMedium">
                 Estrutura moderna com foco em conforto, biossegurança e atendimento de excelência.
@@ -62,6 +67,7 @@ function Hero() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
