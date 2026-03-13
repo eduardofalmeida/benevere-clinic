@@ -87,15 +87,6 @@ function Navbar() {
             </a>
           ))}
         </nav>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noreferrer"
-          onClick={handleCloseMenu}
-          className="btn-primary mt-4 w-full text-sm"
-        >
-          Agendar Consulta no WhatsApp
-        </a>
       </div>
     </header>
   )
