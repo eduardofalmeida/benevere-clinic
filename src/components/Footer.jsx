@@ -1,0 +1,54 @@
+function Footer() {
+  return (
+    <footer className="border-t border-grayLight bg-white py-12">
+      <div className="container-base grid gap-8 text-sm text-grayMedium sm:grid-cols-2 lg:grid-cols-6">
+        <div>
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo-benevere.png"
+              alt="Logo Benevere"
+              className="h-9 w-9 object-contain"
+            />
+            <p className="text-base font-semibold text-navy">Benevere Odontologia</p>
+          </div>
+          <p className="mt-2">Excelência em saúde e estética do sorriso.</p>
+        </div>
+        <div>
+          <p className="font-medium text-navy">Telefone</p>
+          <p className="mt-2">(00) 0000-0000</p>
+        </div>
+        <div>
+          <p className="font-medium text-navy">Endereço</p>
+          <p className="mt-2">Rua Exemplo, 123 - Centro</p>
+        </div>
+        <div>
+          <p className="font-medium text-navy">Instagram</p>
+          <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="mt-2 inline-block transition hover:text-navy">
+            @benevere
+          </a>
+        </div>
+        <div>
+          <p className="font-medium text-navy">Horário</p>
+          <p className="mt-2">Seg a Sex: 08h às 19h</p>
+          <p>Sáb: 08h às 13h</p>
+        </div>
+        <div>
+          <p className="font-medium text-navy">WhatsApp</p>
+          <a
+            href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere."
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 inline-block transition hover:text-navy"
+          >
+            Conversar agora
+          </a>
+        </div>
+      </div>
+      <div className="container-base mt-8 border-t border-grayLight pt-6 text-xs text-graySoft">
+        <p>© {new Date().getFullYear()} Benevere Odontologia. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  )
+}
+
+export default Footer

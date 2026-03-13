@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-grayMedium antialiased;
+  background-color: rgb(213 220 223 / 0.2);
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  background-image:
+    radial-gradient(circle at 15% 12%, rgb(124 140 172 / 0.2), transparent 32%),
+    radial-gradient(circle at 85% 2%, rgb(28 52 76 / 0.12), transparent 30%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(124, 140, 172, 0.35);
+}
+
+.container-base {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+}
+
+.section-title {
+  @apply text-3xl font-semibold tracking-tight text-navy sm:text-4xl;
+}
+
+.section-subtitle {
+  @apply mt-4 max-w-3xl text-base leading-relaxed text-grayMedium sm:text-lg;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-navy px-7 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-blueGray;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border border-blueGray px-7 py-3 text-sm font-medium tracking-wide text-navy transition duration-300 hover:-translate-y-0.5 hover:bg-white;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: blur(4px);
+  transition: opacity 700ms ease, transform 700ms ease, filter 700ms ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.premium-card {
+  @apply rounded-3xl border border-white/60 bg-white/90 shadow-premium backdrop-blur;
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgb(124 140 172 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(124 140 172 / 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
