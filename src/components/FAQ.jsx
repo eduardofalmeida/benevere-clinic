@@ -29,7 +29,7 @@ function FAQ() {
       <div
         data-parallax
         data-parallax-speed="0.05"
-        className="parallax-orb absolute left-[-45px] top-24 h-40 w-40 rounded-full bg-cyan-300/20 blur-3xl"
+        className="parallax-orb absolute left-[-45px] top-24 h-40 w-40 rounded-full bg-blueGray/20 blur-3xl"
       />
       <div data-reveal className="reveal">
         <AnimatedTitle text="Perguntas frequentes" className="section-title lux-title" accent />

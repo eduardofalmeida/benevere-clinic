@@ -42,7 +42,7 @@ function About() {
       <div
         data-parallax
         data-parallax-speed="0.06"
-        className="parallax-orb absolute right-[-60px] top-10 h-52 w-52 rounded-full bg-violet-300/20 blur-3xl"
+        className="parallax-orb absolute right-[-60px] top-10 h-52 w-52 rounded-full bg-blueGray/20 blur-3xl"
       />
       <div className="container-base">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
@@ -61,8 +61,8 @@ function About() {
           </div>
           <div data-reveal className="reveal">
             <img
-              src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
-              alt="Equipe odontológica em ambiente moderno"
+              src="/about-benevere-clinic.png"
+              alt="Consultorio Benevere com equipamentos modernos"
               className="h-72 w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_65px_rgba(38,65,120,0.2)] sm:h-80"
               loading="lazy"
             />
@@ -76,7 +76,7 @@ function About() {
               data-reveal
               className="reveal premium-card spotlight-card tech-card rounded-2xl p-6 transition hover:-translate-y-1"
             >
-              <div className="mb-4 inline-flex rounded-full bg-gradient-to-br from-cyan-200/70 to-violet-300/40 p-3 text-navy">
+              <div className="mb-4 inline-flex rounded-full bg-gradient-to-br from-blueGray/35 to-grayLight/60 p-3 text-navy">
                 <Icon type={item.icon} />
               </div>
               <h3 className="text-lg font-medium text-navy">{item.title}</h3>

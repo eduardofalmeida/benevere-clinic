@@ -93,7 +93,7 @@ function Services() {
       <div
         data-parallax
         data-parallax-speed="0.07"
-        className="parallax-orb absolute left-[-50px] top-20 h-44 w-44 rounded-full bg-cyan-300/20 blur-3xl"
+        className="parallax-orb absolute left-[-50px] top-20 h-44 w-44 rounded-full bg-blueGray/20 blur-3xl"
       />
       <div data-reveal className="reveal">
         <AnimatedTitle text="Serviços de alta performance" className="section-title lux-title" accent />
@@ -108,7 +108,7 @@ function Services() {
             className="reveal premium-card spotlight-card tech-card p-6 transition hover:-translate-y-1.5"
           >
             <div className="mb-4 flex items-center justify-between">
-              <div className="inline-flex rounded-full bg-gradient-to-br from-cyan-200/65 to-violet-300/45 p-3 text-navy">
+              <div className="inline-flex rounded-full bg-gradient-to-br from-blueGray/35 to-grayLight/60 p-3 text-navy">
                 <Icon type={service.icon} />
               </div>
               <span className="rounded-full border border-blue-300/35 bg-blue-100/35 px-3 py-1 text-xs font-semibold text-navy">

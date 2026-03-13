@@ -24,7 +24,7 @@ function Testimonials() {
       <div
         data-parallax
         data-parallax-speed="0.07"
-        className="parallax-orb absolute right-[-55px] top-16 h-44 w-44 rounded-full bg-violet-300/25 blur-3xl"
+        className="parallax-orb absolute right-[-55px] top-16 h-44 w-44 rounded-full bg-blueGray/20 blur-3xl"
       />
       <div data-reveal className="reveal">
         <AnimatedTitle text="Depoimentos Premium" className="section-title lux-title" accent />
@@ -38,7 +38,7 @@ function Testimonials() {
             data-reveal
             className="reveal premium-card spotlight-card tech-card p-6"
           >
-            <p className="text-lg tracking-[0.28em] text-[#7a69ff]">★★★★★</p>
+            <p className="text-lg tracking-[0.28em] text-blueGray">★★★★★</p>
             <p className="mt-3 text-sm leading-relaxed text-grayMedium">{item.text}</p>
             <p className="mt-5 text-sm font-semibold text-navy">{item.name}</p>
             <p className="text-xs uppercase tracking-[0.12em] text-blueGray">{item.treatment}</p>

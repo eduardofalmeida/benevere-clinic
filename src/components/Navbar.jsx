@@ -22,13 +22,18 @@ function Navbar() {
   return (
     <header className="nav-shell sticky top-0 z-40 backdrop-blur-xl">
       <div className="container-base flex h-20 items-center justify-between">
-        <a href="#inicio" className="flex min-w-0 items-center gap-3 text-lg font-semibold tracking-wide text-navy sm:text-xl">
+        <a href="#inicio" className="flex min-w-0 items-center gap-3 text-navy">
           <img
             src="/logo-benevere.png"
             alt="Logo Benevere"
             className="h-10 w-10 object-contain"
           />
-          <span>Benevere</span>
+          <span className="flex flex-col leading-none">
+            <span className="text-lg font-semibold tracking-wide sm:text-xl">Benevere</span>
+            <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.16em] text-grayMedium sm:text-[11px]">
+              dental clinic
+            </span>
+          </span>
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
@@ -36,7 +41,7 @@ function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-grayMedium transition hover:text-[#4d6fff]"
+              className="text-sm font-medium text-grayMedium transition hover:text-blueGray"
             >
               {item.label}
             </a>

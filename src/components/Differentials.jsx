@@ -25,11 +25,11 @@ const differentials = [
 
 function Differentials() {
   return (
-    <section id="experiencia" className="parallax-section lux-band bg-gradient-to-b from-[#edf3ff] to-[#f8f4ff] py-16 sm:py-24">
+    <section id="experiencia" className="parallax-section lux-band bg-gradient-to-b from-[#dee0df] to-[#eef8ff] py-16 sm:py-24">
       <div
         data-parallax
         data-parallax-speed="0.08"
-        className="parallax-orb absolute right-[-65px] top-24 h-48 w-48 rounded-full bg-fuchsia-300/20 blur-3xl"
+        className="parallax-orb absolute right-[-65px] top-24 h-48 w-48 rounded-full bg-blueGray/20 blur-3xl"
       />
       <div className="container-base">
         <div data-reveal className="reveal">
@@ -44,7 +44,7 @@ function Differentials() {
               data-reveal
               className="reveal premium-card spotlight-card tech-card p-5"
             >
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#4f79ff] to-[#8a5bff] text-sm text-white">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[#1e334e] to-[#58c0f9] text-sm text-white">
                 ✓
               </span>
               <p className="mt-3 text-base font-semibold text-navy">{item.title}</p>

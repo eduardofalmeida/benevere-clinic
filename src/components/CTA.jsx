@@ -9,7 +9,7 @@ function CTA() {
     <section id="contato" className="parallax-section container-base py-16 sm:py-24">
       <div
         data-reveal
-        className="reveal grid-pattern relative overflow-hidden rounded-3xl border border-white/35 bg-gradient-to-br from-navy via-[#29497a] to-[#5a54c4] px-6 py-12 text-white shadow-[0_28px_70px_rgba(49,69,170,0.35)] sm:px-10 sm:py-14"
+        className="reveal grid-pattern relative overflow-hidden rounded-3xl border border-white/35 bg-gradient-to-br from-navy via-[#2b4768] to-[#58c0f9] px-6 py-12 text-white shadow-[0_28px_70px_rgba(30,51,78,0.35)] sm:px-10 sm:py-14"
       >
         <div className="absolute inset-0 bg-navy/25" />
         <div
@@ -20,7 +20,7 @@ function CTA() {
         <div
           data-parallax
           data-parallax-speed="0.06"
-          className="hero-orb hero-orb-delayed parallax-orb absolute -left-12 bottom-0 h-28 w-28 rounded-full bg-cyan-300/20 blur-2xl"
+          className="hero-orb hero-orb-delayed parallax-orb absolute -left-12 bottom-0 h-28 w-28 rounded-full bg-blueGray/20 blur-2xl"
         />
         <div className="relative text-center">
           <AnimatedTitle

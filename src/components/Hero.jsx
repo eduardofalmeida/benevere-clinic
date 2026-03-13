@@ -10,12 +10,12 @@ function Hero() {
       <div
         data-parallax
         data-parallax-speed="0.1"
-        className="hero-orb parallax-orb absolute -left-14 top-20 h-44 w-44 rounded-full bg-cyan-300/25 blur-3xl"
+        className="hero-orb parallax-orb absolute -left-14 top-20 h-44 w-44 rounded-full bg-blueGray/25 blur-3xl"
       />
       <div
         data-parallax
         data-parallax-speed="0.07"
-        className="hero-orb hero-orb-delayed parallax-orb absolute right-10 top-16 h-56 w-56 rounded-full bg-fuchsia-400/20 blur-3xl"
+        className="hero-orb hero-orb-delayed parallax-orb absolute right-10 top-16 h-56 w-56 rounded-full bg-blueGray/20 blur-3xl"
       />
       <div className="container-base relative py-14 sm:py-20 lg:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -80,8 +80,8 @@ function Hero() {
           <div className="relative">
             <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blueGray/25 blur-2xl" />
             <img
-              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=80"
-              alt="Consultório odontológico moderno e elegante"
+              src="/hero-benevere-real.png"
+              alt="Especialista da Benevere no consultorio"
               className="h-[370px] w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_70px_rgba(31,58,109,0.32)] sm:h-[460px]"
               loading="lazy"
             />

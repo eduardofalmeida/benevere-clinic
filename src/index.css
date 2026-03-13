@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --vibrant-cyan: #39d7ff;
-  --vibrant-blue: #507cff;
-  --vibrant-purple: #8a5bff;
-  --vibrant-pink: #f14ff2;
+  --brand-primary: rgb(30 51 78);
+  --brand-secondary: rgb(88 192 249);
+  --brand-tertiary: rgb(222 224 223);
+  --font-primary: 'Gotham', 'Gotham Book', 'Gotham Medium', 'Gotham Bold', 'Montserrat', 'Avenir Next', ui-sans-serif, system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  font-family: var(--font-primary);
 }
 
 html {
@@ -17,13 +21,13 @@ html {
 
 body {
   @apply text-grayMedium antialiased;
-  background-color: #edf2ff;
-  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--brand-tertiary);
+  font-family: var(--font-primary);
   background-image:
-    radial-gradient(circle at 12% 8%, rgb(57 215 255 / 0.24), transparent 33%),
-    radial-gradient(circle at 88% 5%, rgb(80 124 255 / 0.2), transparent 30%),
-    radial-gradient(circle at 50% 100%, rgb(138 91 255 / 0.18), transparent 38%),
-    linear-gradient(180deg, #f7faff 0%, #f2f6ff 45%, #eef2ff 100%);
+    radial-gradient(circle at 12% 8%, rgb(88 192 249 / 0.2), transparent 33%),
+    radial-gradient(circle at 88% 5%, rgb(30 51 78 / 0.16), transparent 30%),
+    radial-gradient(circle at 50% 100%, rgb(88 192 249 / 0.14), transparent 38%),
+    linear-gradient(180deg, rgb(245 247 247) 0%, rgb(236 239 239) 45%, rgb(222 224 223) 100%);
   background-attachment: fixed;
   position: relative;
 }
@@ -33,14 +37,14 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 80% 22%, rgb(241 79 242 / 0.1), transparent 25%),
-    radial-gradient(circle at 20% 72%, rgb(57 215 255 / 0.08), transparent 28%);
+    radial-gradient(circle at 80% 22%, rgb(88 192 249 / 0.08), transparent 25%),
+    radial-gradient(circle at 20% 72%, rgb(30 51 78 / 0.08), transparent 28%);
   pointer-events: none;
   z-index: -1;
 }
 
 ::selection {
-  background: rgba(80, 124, 255, 0.28);
+  background: rgb(88 192 249 / 0.35);
 }
 
 .container-base {
@@ -58,13 +62,13 @@ body::before {
 
 .btn-primary {
   @apply items-center justify-center rounded-full px-7 py-3 text-sm font-medium tracking-wide text-white transition duration-300;
-  background-image: linear-gradient(135deg, var(--vibrant-blue), var(--vibrant-purple) 55%, var(--vibrant-pink));
-  box-shadow: 0 10px 30px rgba(80, 124, 255, 0.3);
+  background-image: linear-gradient(135deg, rgb(30 51 78), rgb(44 96 134) 55%, rgb(88 192 249));
+  box-shadow: 0 10px 30px rgb(30 51 78 / 0.28);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 16px 36px rgba(80, 124, 255, 0.38);
+  box-shadow: 0 16px 36px rgb(30 51 78 / 0.38);
 }
 
 .btn-outline {
@@ -95,7 +99,7 @@ body::before {
   content: '';
   position: absolute;
   inset: -1px;
-  background: linear-gradient(125deg, rgb(80 124 255 / 0.14), rgb(57 215 255 / 0), rgb(138 91 255 / 0.12));
+  background: linear-gradient(125deg, rgb(88 192 249 / 0.18), rgb(88 192 249 / 0), rgb(30 51 78 / 0.1));
   opacity: 0;
   transition: opacity 350ms ease;
   pointer-events: none;
@@ -103,7 +107,7 @@ body::before {
 
 .premium-card:hover {
   transform: translateY(-6px);
-  border-color: rgb(80 124 255 / 0.28);
+  border-color: rgb(88 192 249 / 0.35);
   box-shadow: 0 22px 55px rgba(31, 56, 120, 0.14);
 }
 
@@ -113,13 +117,13 @@ body::before {
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgb(124 140 172 / 0.09) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(124 140 172 / 0.09) 1px, transparent 1px);
+    linear-gradient(rgb(30 51 78 / 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(30 51 78 / 0.09) 1px, transparent 1px);
   background-size: 34px 34px;
 }
 
 .gradient-text {
-  background: linear-gradient(110deg, #ffffff 20%, #bceeff 45%, #d2bcff 72%, #ffffff);
+  background: linear-gradient(110deg, #ffffff 20%, rgb(88 192 249) 48%, rgb(222 224 223) 78%, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -136,9 +140,9 @@ body::before {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 14% 18%, rgb(57 215 255 / 0.2), transparent 36%),
-    radial-gradient(circle at 86% 24%, rgb(138 91 255 / 0.26), transparent 34%),
-    radial-gradient(circle at 55% 95%, rgb(241 79 242 / 0.16), transparent 33%);
+    radial-gradient(circle at 14% 18%, rgb(88 192 249 / 0.22), transparent 36%),
+    radial-gradient(circle at 86% 24%, rgb(30 51 78 / 0.24), transparent 34%),
+    radial-gradient(circle at 55% 95%, rgb(222 224 223 / 0.22), transparent 33%);
   pointer-events: none;
 }
 
@@ -152,13 +156,13 @@ body::before {
 
 .tech-card {
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.86), rgba(246, 249, 255, 0.85)),
-    linear-gradient(130deg, rgba(57, 215, 255, 0.07), rgba(138, 91, 255, 0.09));
+    linear-gradient(160deg, rgb(255 255 255 / 0.86), rgb(245 247 247 / 0.86)),
+    linear-gradient(130deg, rgb(88 192 249 / 0.08), rgb(30 51 78 / 0.08));
 }
 
 .cta-capsule {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(188, 238, 255, 0.07));
+  background: linear-gradient(135deg, rgb(255 255 255 / 0.12), rgb(88 192 249 / 0.1));
   backdrop-filter: blur(8px);
 }
 
@@ -180,8 +184,8 @@ body::before {
 .scroll-progress-bar {
   height: 100%;
   width: 0;
-  background-image: linear-gradient(90deg, var(--vibrant-cyan), var(--vibrant-blue), var(--vibrant-purple), var(--vibrant-pink));
-  box-shadow: 0 0 18px rgba(80, 124, 255, 0.6);
+  background-image: linear-gradient(90deg, rgb(88 192 249), rgb(30 51 78), rgb(88 192 249));
+  box-shadow: 0 0 18px rgb(88 192 249 / 0.55);
   transition: width 120ms ease-out;
 }
 
@@ -190,7 +194,7 @@ body::before {
 }
 
 .lux-title span {
-  background: linear-gradient(110deg, #2b4b79 15%, #4e6eff 45%, #9a57ff 78%);
+  background: linear-gradient(110deg, rgb(30 51 78) 15%, rgb(44 96 134) 45%, rgb(88 192 249) 78%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -209,9 +213,9 @@ body::before {
   border-radius: inherit;
   background: radial-gradient(
     420px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(80, 124, 255, 0.16),
-    rgba(57, 215, 255, 0.08) 24%,
-    rgba(138, 91, 255, 0) 62%
+    rgb(88 192 249 / 0.2),
+    rgb(88 192 249 / 0.08) 24%,
+    rgb(30 51 78 / 0) 62%
   );
   opacity: 0;
   transition: opacity 320ms ease;
@@ -231,8 +235,8 @@ body::before {
   position: absolute;
   inset: -2px;
   background:
-    radial-gradient(circle at 14% 12%, rgb(57 215 255 / 0.12), transparent 28%),
-    radial-gradient(circle at 88% 84%, rgb(138 91 255 / 0.14), transparent 30%);
+    radial-gradient(circle at 14% 12%, rgb(88 192 249 / 0.14), transparent 28%),
+    radial-gradient(circle at 88% 84%, rgb(30 51 78 / 0.12), transparent 30%);
   pointer-events: none;
 }
 
@@ -283,62 +287,62 @@ body::before {
 }
 
 .accent-char {
-  background: linear-gradient(115deg, #2f66ff 12%, #7a58ff 54%, #d44cff 90%);
+  background: linear-gradient(115deg, rgb(30 51 78) 12%, rgb(44 96 134) 54%, rgb(88 192 249) 90%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 html.dark body {
-  color: #a9bad8;
-  background-color: #060b18;
+  color: #b3c2ce;
+  background-color: #0d1826;
   background-image:
-    radial-gradient(circle at 14% 10%, rgb(79 108 255 / 0.24), transparent 34%),
-    radial-gradient(circle at 85% 9%, rgb(128 70 255 / 0.2), transparent 30%),
-    radial-gradient(circle at 45% 100%, rgb(41 196 255 / 0.16), transparent 42%),
-    linear-gradient(180deg, #060b18 0%, #090f20 48%, #0a1126 100%);
+    radial-gradient(circle at 14% 10%, rgb(88 192 249 / 0.2), transparent 34%),
+    radial-gradient(circle at 85% 9%, rgb(30 51 78 / 0.26), transparent 30%),
+    radial-gradient(circle at 45% 100%, rgb(88 192 249 / 0.14), transparent 42%),
+    linear-gradient(180deg, #0d1826 0%, #101e2f 48%, #132234 100%);
 }
 
 html.dark body::before {
   background:
-    radial-gradient(circle at 20% 75%, rgb(57 215 255 / 0.1), transparent 32%),
-    radial-gradient(circle at 85% 24%, rgb(171 94 255 / 0.14), transparent 33%);
+    radial-gradient(circle at 20% 75%, rgb(88 192 249 / 0.1), transparent 32%),
+    radial-gradient(circle at 85% 24%, rgb(30 51 78 / 0.18), transparent 33%);
 }
 
 html.dark .nav-shell {
-  border-bottom-color: rgba(124, 144, 212, 0.35);
-  background: linear-gradient(120deg, rgba(9, 15, 33, 0.88), rgba(15, 23, 44, 0.82));
+  border-bottom-color: rgb(88 192 249 / 0.3);
+  background: linear-gradient(120deg, rgb(13 24 38 / 0.9), rgb(17 31 48 / 0.84));
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
 }
 
 html.dark .section-title,
 html.dark .text-navy {
-  color: #ecf2ff !important;
+  color: #eef5fb !important;
 }
 
 html.dark .section-subtitle,
 html.dark .text-grayMedium {
-  color: #9db0cf !important;
+  color: #b3c2ce !important;
 }
 
 html.dark .text-blueGray,
 html.dark .text-graySoft {
-  color: #89a3d2 !important;
+  color: #8ac6eb !important;
 }
 
 html.dark .premium-card,
 html.dark .tech-card {
-  border-color: rgba(122, 148, 224, 0.3);
+  border-color: rgb(88 192 249 / 0.25);
   background:
-    linear-gradient(160deg, rgba(13, 20, 41, 0.84), rgba(15, 24, 49, 0.84)),
-    linear-gradient(130deg, rgba(57, 215, 255, 0.06), rgba(138, 91, 255, 0.08));
+    linear-gradient(160deg, rgb(14 25 40 / 0.84), rgb(18 31 49 / 0.84)),
+    linear-gradient(130deg, rgb(88 192 249 / 0.06), rgb(30 51 78 / 0.1));
   box-shadow: 0 20px 50px rgba(3, 8, 21, 0.5);
 }
 
 html.dark .lux-band::before {
   background:
-    radial-gradient(circle at 16% 10%, rgb(57 215 255 / 0.16), transparent 30%),
-    radial-gradient(circle at 88% 82%, rgb(138 91 255 / 0.16), transparent 31%);
+    radial-gradient(circle at 16% 10%, rgb(88 192 249 / 0.16), transparent 30%),
+    radial-gradient(circle at 88% 82%, rgb(30 51 78 / 0.16), transparent 31%);
 }
 
 html.dark .scroll-progress-wrap {
@@ -346,7 +350,7 @@ html.dark .scroll-progress-wrap {
 }
 
 html.dark .accent-char {
-  background: linear-gradient(115deg, #8ed2ff 6%, #9b8cff 48%, #f18cff 94%);
+  background: linear-gradient(115deg, rgb(222 224 223) 6%, rgb(145 206 240) 48%, rgb(88 192 249) 94%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
