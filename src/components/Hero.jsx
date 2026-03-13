@@ -25,12 +25,11 @@ function Hero() {
           </p>
           <AnimatedTitle
             as="h1"
-            text="Transforme seu sorriso com tecnologia de ultima geracao"
+            text="Planejamento digital, alta precisão e atendimento humano em cada etapa."
             className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl"
           />
           <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
-            Uma experiencia clinica inteligente, com planejamento digital, protocolos de alta
-            precisao e atendimento humano do inicio ao resultado final.
+            Do seu primeiro sorriso ao resultado final - cuidado completo para você! 😁
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
