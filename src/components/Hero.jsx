@@ -1,5 +1,5 @@
 const WHATSAPP_URL =
-  'https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
+  'https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
 
 function Hero() {
   return (
@@ -12,10 +12,11 @@ function Hero() {
             Odontologia premium
           </p>
           <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Benevere Odontologia
+            Transforme seu sorriso com planejamento digital e cuidado humanizado
           </h1>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
-            Sorriso saudável com tecnologia e cuidado em cada detalhe.
+            Tratamentos personalizados para unir saude, estetica e conforto em todas as etapas da
+            sua jornada.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
@@ -32,6 +33,18 @@ function Hero() {
             >
               Conhecer Serviços
             </a>
+          </div>
+
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.08em] text-grayLight sm:text-sm">
+            <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1.5">
+              Resposta rapida no WhatsApp
+            </span>
+            <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1.5">
+              Atendimento com hora marcada
+            </span>
+            <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1.5">
+              Avaliacao personalizada
+            </span>
           </div>
 
           <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
@@ -60,9 +73,10 @@ function Hero() {
               loading="lazy"
             />
             <div className="absolute bottom-4 left-4 max-w-xs rounded-2xl border border-white/40 bg-white/85 p-4 shadow-premium backdrop-blur">
-              <p className="text-sm font-semibold text-navy">Ambiente sofisticado e acolhedor</p>
+              <p className="text-sm font-semibold text-navy">Atendimento premium, humano e seguro</p>
               <p className="mt-1 text-xs leading-relaxed text-grayMedium">
-                Estrutura moderna com foco em conforto, biossegurança e atendimento de excelência.
+                Estrutura moderna com foco em conforto, biosseguranca e previsibilidade de
+                resultados.
               </p>
             </div>
           </div>

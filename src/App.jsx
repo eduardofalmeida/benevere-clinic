@@ -32,7 +32,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden pb-20 sm:pb-0">
       <Navbar />
       <main>
         <Hero />

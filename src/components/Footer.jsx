@@ -15,11 +15,11 @@ function Footer() {
         </div>
         <div>
           <p className="font-medium text-navy">Telefone</p>
-          <p className="mt-2">(00) 0000-0000</p>
+          <p className="mt-2">+55 18 99611-9622</p>
         </div>
         <div>
           <p className="font-medium text-navy">Endereço</p>
-          <p className="mt-2">Rua Exemplo, 123 - Centro</p>
+          <p className="mt-2">R. Smith Vasconcelos, 711 - Centro, Assis - SP, 19814-010</p>
         </div>
         <div>
           <p className="font-medium text-navy">Instagram</p>
@@ -35,7 +35,7 @@ function Footer() {
         <div>
           <p className="font-medium text-navy">WhatsApp</p>
           <a
-            href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere."
+            href="https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere."
             target="_blank"
             rel="noreferrer"
             className="mt-2 inline-block transition hover:text-navy"
