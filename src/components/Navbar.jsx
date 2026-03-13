@@ -20,7 +20,7 @@ function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/80 bg-white/80 backdrop-blur-xl">
+    <header className="nav-shell sticky top-0 z-40 backdrop-blur-xl">
       <div className="container-base flex h-20 items-center justify-between">
         <a href="#inicio" className="flex min-w-0 items-center gap-3 text-lg font-semibold tracking-wide text-navy sm:text-xl">
           <img
@@ -36,7 +36,7 @@ function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-grayMedium transition hover:text-navy"
+              className="text-sm font-medium text-grayMedium transition hover:text-[#4d6fff]"
             >
               {item.label}
             </a>
@@ -58,7 +58,7 @@ function Navbar() {
             aria-expanded={isOpen}
             aria-controls="menu-mobile"
             aria-label="Abrir menu"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-grayLight text-navy transition hover:bg-white lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/75 bg-white/70 text-navy transition hover:bg-white lg:hidden"
           >
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
               {isOpen ? (
@@ -73,7 +73,7 @@ function Navbar() {
 
       <div
         id="menu-mobile"
-        className={`border-t border-grayLight/70 bg-white/95 px-5 py-4 backdrop-blur-xl transition lg:hidden ${isOpen ? 'block' : 'hidden'}`}
+        className={`border-t border-white/80 bg-white/90 px-5 py-4 backdrop-blur-xl transition lg:hidden ${isOpen ? 'block' : 'hidden'}`}
       >
         <nav className="flex flex-col gap-2">
           {navLinks.map((item) => (

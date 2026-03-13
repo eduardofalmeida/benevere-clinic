@@ -1,29 +1,43 @@
+import AnimatedTitle from './AnimatedTitle'
+
 const WHATSAPP_URL =
   'https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
 
 function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-navy to-blueGray">
+    <section id="inicio" className="aurora-hero parallax-section relative overflow-hidden bg-gradient-to-br from-navy to-blueGray">
       <div className="absolute inset-0 bg-navy/35" />
+      <div
+        data-parallax
+        data-parallax-speed="0.1"
+        className="hero-orb parallax-orb absolute -left-14 top-20 h-44 w-44 rounded-full bg-cyan-300/25 blur-3xl"
+      />
+      <div
+        data-parallax
+        data-parallax-speed="0.07"
+        className="hero-orb hero-orb-delayed parallax-orb absolute right-10 top-16 h-56 w-56 rounded-full bg-fuchsia-400/20 blur-3xl"
+      />
       <div className="container-base relative py-14 sm:py-20 lg:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div data-reveal className="reveal">
           <p className="mb-4 inline-flex rounded-full border border-white/45 bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white">
             Odontologia premium
           </p>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Transforme seu sorriso com planejamento digital e cuidado humanizado
-          </h1>
+          <AnimatedTitle
+            as="h1"
+            text="Transforme seu sorriso com tecnologia de ultima geracao"
+            className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl"
+          />
           <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
-            Tratamentos personalizados para unir saude, estetica e conforto em todas as etapas da
-            sua jornada.
+            Uma experiencia clinica inteligente, com planejamento digital, protocolos de alta
+            precisao e atendimento humano do inicio ao resultado final.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide text-navy shadow-[0_10px_30px_rgba(0,0,0,0.18)] transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide text-navy shadow-[0_10px_30px_rgba(57,215,255,0.25)] transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
             >
               Agendar Consulta
             </a>
@@ -69,7 +83,7 @@ function Hero() {
             <img
               src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1200&q=80"
               alt="Consultório odontológico moderno e elegante"
-              className="h-[370px] w-full rounded-3xl border border-white/80 object-cover shadow-premium sm:h-[460px]"
+              className="h-[370px] w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_70px_rgba(31,58,109,0.32)] sm:h-[460px]"
               loading="lazy"
             />
             <div className="absolute bottom-4 left-4 max-w-xs rounded-2xl border border-white/40 bg-white/85 p-4 shadow-premium backdrop-blur">

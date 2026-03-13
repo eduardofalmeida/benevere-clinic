@@ -1,3 +1,5 @@
+import AnimatedTitle from './AnimatedTitle'
+
 const services = [
   {
     title: 'Limpeza e prevenção',
@@ -87,9 +89,14 @@ function Icon({ type }) {
 
 function Services() {
   return (
-    <section id="servicos" className="container-base py-16 sm:py-24">
+    <section id="servicos" className="parallax-section container-base py-16 sm:py-24">
+      <div
+        data-parallax
+        data-parallax-speed="0.07"
+        className="parallax-orb absolute left-[-50px] top-20 h-44 w-44 rounded-full bg-cyan-300/20 blur-3xl"
+      />
       <div data-reveal className="reveal">
-        <h2 className="section-title">Serviços</h2>
+        <AnimatedTitle text="Serviços de alta performance" className="section-title lux-title" accent />
         <p className="section-subtitle">Tratamentos completos com estética refinada e precisão clínica.</p>
       </div>
 
@@ -98,13 +105,13 @@ function Services() {
           <article
             key={service.title}
             data-reveal
-            className="reveal premium-card p-6 transition hover:-translate-y-1.5"
+            className="reveal premium-card spotlight-card tech-card p-6 transition hover:-translate-y-1.5"
           >
             <div className="mb-4 flex items-center justify-between">
-              <div className="inline-flex rounded-full bg-blueGray/15 p-3 text-navy">
+              <div className="inline-flex rounded-full bg-gradient-to-br from-cyan-200/65 to-violet-300/45 p-3 text-navy">
                 <Icon type={service.icon} />
               </div>
-              <span className="rounded-full border border-blueGray/30 bg-blueGray/10 px-3 py-1 text-xs font-semibold text-navy">
+              <span className="rounded-full border border-blue-300/35 bg-blue-100/35 px-3 py-1 text-xs font-semibold text-navy">
                 {service.tag}
               </span>
             </div>

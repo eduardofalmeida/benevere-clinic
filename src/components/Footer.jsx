@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="border-t border-grayLight bg-white py-12">
+    <footer className="lux-band border-t border-white/70 bg-white/75 py-12 backdrop-blur">
       <div className="container-base grid gap-8 text-sm text-grayMedium sm:grid-cols-2 lg:grid-cols-6">
         <div>
           <div className="flex items-center gap-3">
@@ -44,7 +44,7 @@ function Footer() {
           </a>
         </div>
       </div>
-      <div className="container-base mt-8 border-t border-grayLight pt-6 text-xs text-graySoft">
+      <div className="container-base mt-8 border-t border-white/70 pt-6 text-xs text-graySoft">
         <p>© {new Date().getFullYear()} Benevere Odontologia. Todos os direitos reservados.</p>
       </div>
     </footer>

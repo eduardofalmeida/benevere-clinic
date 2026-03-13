@@ -1,3 +1,5 @@
+import AnimatedTitle from './AnimatedTitle'
+
 const testimonials = [
   {
     name: 'Carla Menezes',
@@ -18,9 +20,14 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <section id="depoimentos" className="container-base py-16 sm:py-24">
+    <section id="depoimentos" className="parallax-section lux-band container-base py-16 sm:py-24">
+      <div
+        data-parallax
+        data-parallax-speed="0.07"
+        className="parallax-orb absolute right-[-55px] top-16 h-44 w-44 rounded-full bg-violet-300/25 blur-3xl"
+      />
       <div data-reveal className="reveal">
-        <h2 className="section-title">Depoimentos</h2>
+        <AnimatedTitle text="Depoimentos Premium" className="section-title lux-title" accent />
         <p className="section-subtitle">Histórias reais de pacientes que confiaram na Benevere.</p>
       </div>
 
@@ -29,9 +36,9 @@ function Testimonials() {
           <article
             key={item.name}
             data-reveal
-            className="reveal premium-card p-6"
+            className="reveal premium-card spotlight-card tech-card p-6"
           >
-            <p className="text-lg tracking-[0.28em] text-blueGray">★★★★★</p>
+            <p className="text-lg tracking-[0.28em] text-[#7a69ff]">★★★★★</p>
             <p className="mt-3 text-sm leading-relaxed text-grayMedium">{item.text}</p>
             <p className="mt-5 text-sm font-semibold text-navy">{item.name}</p>
             <p className="text-xs uppercase tracking-[0.12em] text-blueGray">{item.treatment}</p>

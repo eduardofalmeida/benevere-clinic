@@ -1,3 +1,5 @@
+import AnimatedTitle from './AnimatedTitle'
+
 const items = [
   { title: 'Tecnologia avançada', icon: 'tech' },
   { title: 'Profissionais especializados', icon: 'team' },
@@ -36,11 +38,16 @@ function Icon({ type }) {
 
 function About() {
   return (
-    <section id="sobre" className="border-y border-grayLight/70 bg-white/80 py-16 sm:py-24">
+    <section id="sobre" className="parallax-section lux-band border-y border-white/60 bg-white/70 py-16 sm:py-24">
+      <div
+        data-parallax
+        data-parallax-speed="0.06"
+        className="parallax-orb absolute right-[-60px] top-10 h-52 w-52 rounded-full bg-violet-300/20 blur-3xl"
+      />
       <div className="container-base">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div data-reveal className="reveal">
-            <h2 className="section-title">Sobre a Benevere</h2>
+            <AnimatedTitle text="Sobre a Benevere" className="section-title lux-title" accent />
             <p className="section-subtitle">
               A Benevere nasceu com o propósito de oferecer odontologia moderna, tecnológica e
               humanizada. Nosso foco é proporcionar saúde, estética e confiança através de
@@ -56,7 +63,7 @@ function About() {
             <img
               src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
               alt="Equipe odontológica em ambiente moderno"
-              className="h-72 w-full rounded-3xl border border-grayLight/70 object-cover shadow-premium sm:h-80"
+              className="h-72 w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_65px_rgba(38,65,120,0.2)] sm:h-80"
               loading="lazy"
             />
           </div>
@@ -67,9 +74,9 @@ function About() {
             <article
               key={item.title}
               data-reveal
-              className="reveal rounded-2xl border border-grayLight bg-grayLight/25 p-6 transition hover:-translate-y-1"
+              className="reveal premium-card spotlight-card tech-card rounded-2xl p-6 transition hover:-translate-y-1"
             >
-              <div className="mb-4 inline-flex rounded-full bg-blueGray/15 p-3 text-navy">
+              <div className="mb-4 inline-flex rounded-full bg-gradient-to-br from-cyan-200/70 to-violet-300/40 p-3 text-navy">
                 <Icon type={item.icon} />
               </div>
               <h3 className="text-lg font-medium text-navy">{item.title}</h3>

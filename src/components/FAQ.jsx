@@ -1,3 +1,5 @@
+import AnimatedTitle from './AnimatedTitle'
+
 const faqs = [
   {
     question: 'A Benevere atende somente estética dental?',
@@ -23,9 +25,14 @@ const faqs = [
 
 function FAQ() {
   return (
-    <section id="faq" className="container-base py-16 sm:py-24">
+    <section id="faq" className="parallax-section container-base py-16 sm:py-24">
+      <div
+        data-parallax
+        data-parallax-speed="0.05"
+        className="parallax-orb absolute left-[-45px] top-24 h-40 w-40 rounded-full bg-cyan-300/20 blur-3xl"
+      />
       <div data-reveal className="reveal">
-        <h2 className="section-title">Perguntas frequentes</h2>
+        <AnimatedTitle text="Perguntas frequentes" className="section-title lux-title" accent />
       </div>
 
       <div className="mt-10 space-y-4">
@@ -33,7 +40,7 @@ function FAQ() {
           <details
             key={faq.question}
             data-reveal
-            className="reveal premium-card group p-6 open:border-blueGray/40"
+            className="reveal premium-card spotlight-card tech-card group p-6 open:border-blue-300/45"
           >
             <summary className="cursor-pointer list-none pr-8 text-base font-semibold text-navy marker:content-['']">
               {faq.question}

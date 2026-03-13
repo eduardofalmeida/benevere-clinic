@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import About from './components/About'
 import CTA from './components/CTA'
 import Differentials from './components/Differentials'
@@ -12,6 +12,8 @@ import Testimonials from './components/Testimonials'
 import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
+  const [scrollProgress, setScrollProgress] = useState(0)
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,10 +33,92 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
+  useEffect(() => {
+    function updateScrollProgress() {
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight
+      const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0
+      setScrollProgress(Math.min(100, Math.max(0, progress)))
+    }
+
+    function updatePointerGlow(event) {
+      document.documentElement.style.setProperty('--mx', `${event.clientX}px`)
+      document.documentElement.style.setProperty('--my', `${event.clientY}px`)
+    }
+
+    updateScrollProgress()
+    window.addEventListener('scroll', updateScrollProgress, { passive: true })
+    window.addEventListener('mousemove', updatePointerGlow)
+
+    return () => {
+      window.removeEventListener('scroll', updateScrollProgress)
+      window.removeEventListener('mousemove', updatePointerGlow)
+    }
+  }, [])
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+    function updateTheme() {
+      const hour = new Date().getHours()
+      const nightTime = hour >= 19 || hour < 7
+      const shouldUseDark = mediaQuery.matches || nightTime
+      document.documentElement.classList.toggle('dark', shouldUseDark)
+    }
+
+    updateTheme()
+    const intervalId = window.setInterval(updateTheme, 60_000)
+    mediaQuery.addEventListener('change', updateTheme)
+
+    return () => {
+      window.clearInterval(intervalId)
+      mediaQuery.removeEventListener('change', updateTheme)
+    }
+  }, [])
+
+  useEffect(() => {
+    const parallaxElements = Array.from(document.querySelectorAll('[data-parallax]'))
+    let rafId = 0
+
+    function updateParallax() {
+      parallaxElements.forEach((element) => {
+        const speed = Number(element.getAttribute('data-parallax-speed') ?? '0.08')
+        const parent = element.parentElement
+
+        if (!parent) return
+
+        const rect = parent.getBoundingClientRect()
+        const centerOffset = window.innerHeight * 0.5 - (rect.top + rect.height * 0.5)
+        const translateY = centerOffset * speed
+        element.style.transform = `translate3d(0, ${translateY.toFixed(2)}px, 0)`
+      })
+
+      rafId = 0
+    }
+
+    function requestParallaxUpdate() {
+      if (!rafId) {
+        rafId = window.requestAnimationFrame(updateParallax)
+      }
+    }
+
+    requestParallaxUpdate()
+    window.addEventListener('scroll', requestParallaxUpdate, { passive: true })
+    window.addEventListener('resize', requestParallaxUpdate)
+
+    return () => {
+      window.removeEventListener('scroll', requestParallaxUpdate)
+      window.removeEventListener('resize', requestParallaxUpdate)
+      if (rafId) window.cancelAnimationFrame(rafId)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen overflow-x-hidden pb-20 sm:pb-0">
+      <div className="scroll-progress-wrap" aria-hidden="true">
+        <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
+      </div>
       <Navbar />
-      <main>
+      <main className="lux-main">
         <Hero />
         <About />
         <Services />
