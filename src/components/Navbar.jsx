@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/80 bg-white/80 backdrop-blur-xl">
       <div className="container-base flex h-20 items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-3 text-xl font-semibold tracking-wide text-navy">
+        <a href="#inicio" className="flex min-w-0 items-center gap-3 text-lg font-semibold tracking-wide text-navy sm:text-xl">
           <img
             src="/logo-benevere.png"
             alt="Logo Benevere"
@@ -43,12 +43,12 @@ function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="btn-primary hidden px-5 py-2.5 text-xs sm:inline-flex sm:text-sm"
+            className="btn-primary hidden px-5 py-2.5 text-xs lg:inline-flex lg:text-sm"
           >
             Agendar Consulta
           </a>
