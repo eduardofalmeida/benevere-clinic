@@ -2,6 +2,28 @@ const WHATSAPP_URL =
   'https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
 const PHONE_URL = 'tel:+5518996119622'
 
+function PhoneIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] shrink-0" fill="none" aria-hidden="true">
+      <path
+        d="M5 4.8c0-.44.36-.8.8-.8h2.47c.38 0 .71.27.78.64l.56 2.78a.8.8 0 0 1-.23.74L7.86 9.67a13.2 13.2 0 0 0 6.47 6.47l1.5-1.52a.8.8 0 0 1 .74-.23l2.78.56c.37.07.64.4.64.78v2.47a.8.8 0 0 1-.8.8h-1.6C10.45 19 5 13.55 5 6.4V4.8Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] shrink-0" fill="currentColor" aria-hidden="true">
+      <path d="M12.04 2.2c-5.36 0-9.7 4.33-9.7 9.67 0 1.7.45 3.37 1.28 4.84L2.2 21.8l5.26-1.38a9.7 9.7 0 0 0 4.58 1.15h.01c5.35 0 9.69-4.33 9.69-9.68 0-2.58-1.01-5.01-2.83-6.83A9.64 9.64 0 0 0 12.04 2.2Zm0 17.74h-.01c-1.42 0-2.82-.39-4.03-1.13l-.29-.18-3.12.82.84-3.04-.19-.31a8.1 8.1 0 0 1-1.23-4.23c0-4.47 3.63-8.1 8.1-8.1 2.16 0 4.2.84 5.73 2.36a8.07 8.07 0 0 1 2.37 5.74c0 4.47-3.63 8.09-8.09 8.09Zm4.44-6.05c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.2-1.4-1.34-1.64-.14-.24-.01-.37.1-.48.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.29-.74-1.77-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.65.3-.22.24-.82.8-.82 1.98 0 1.17.86 2.3.98 2.46.12.16 1.68 2.56 4.06 3.6.57.24 1 .4 1.35.5.57.18 1.09.15 1.5.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+    </svg>
+  )
+}
+
 function WhatsAppButton() {
   return (
     <>
@@ -9,16 +31,18 @@ function WhatsAppButton() {
         <div className="mx-auto flex max-w-md items-center gap-2">
           <a
             href={PHONE_URL}
-            className="inline-flex h-11 flex-1 items-center justify-center rounded-full border border-blueGray/40 bg-white text-xs font-semibold uppercase tracking-[0.08em] text-navy"
+            className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full border border-blueGray/40 bg-white px-3 text-xs font-semibold uppercase tracking-[0.08em] text-navy"
           >
+            <PhoneIcon />
             Ligar
           </a>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-11 flex-1 items-center justify-center rounded-full bg-[#25D366] text-xs font-semibold uppercase tracking-[0.08em] text-white"
+            className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-3 text-xs font-semibold uppercase tracking-[0.08em] text-white"
           >
+            <WhatsAppIcon />
             WhatsApp
           </a>
         </div>
@@ -29,13 +53,9 @@ function WhatsAppButton() {
         target="_blank"
         rel="noreferrer"
         aria-label="Agendar consulta pelo WhatsApp"
-        className="fixed bottom-5 right-5 z-50 hidden h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105 sm:inline-flex"
+        className="fixed bottom-5 right-5 z-50 hidden h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white ring-4 ring-[#25D366]/25 shadow-lg transition hover:scale-105 sm:inline-flex"
       >
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#25D366]/30" />
-        <svg viewBox="0 0 32 32" className="relative z-10 h-7 w-7 fill-current" aria-hidden="true">
-          <path d="M19.11 17.42c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.08-.3-.15-1.26-.46-2.4-1.46-.88-.78-1.48-1.74-1.66-2.04-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.6-.5-.53-.68-.54h-.58c-.2 0-.53.08-.8.38-.28.3-1.06 1.03-1.06 2.52s1.08 2.93 1.23 3.13c.15.2 2.11 3.22 5.11 4.52.71.31 1.27.49 1.71.62.72.23 1.37.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z" />
-          <path d="M16.03 3.2c-7.08 0-12.82 5.74-12.82 12.82 0 2.26.59 4.47 1.71 6.42L3.2 28.8l6.53-1.7a12.77 12.77 0 0 0 6.3 1.65h.01c7.08 0 12.82-5.74 12.82-12.82 0-3.43-1.34-6.65-3.76-9.07A12.75 12.75 0 0 0 16.03 3.2Zm0 23.4h-.01a10.6 10.6 0 0 1-5.39-1.48l-.38-.22-3.88 1.01 1.04-3.78-.25-.39a10.64 10.64 0 0 1 1.63-13.39 10.58 10.58 0 0 1 7.24-2.86c5.84 0 10.59 4.75 10.59 10.59S21.87 26.6 16.03 26.6Z" />
-        </svg>
+        <WhatsAppIcon />
       </a>
     </>
   )
