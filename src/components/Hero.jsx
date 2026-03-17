@@ -48,14 +48,26 @@ function Hero() {
             </a>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-1.5 text-[7px] font-semibold uppercase leading-[1.15] tracking-[0.03em] text-grayLight sm:flex sm:flex-wrap sm:gap-1.5 sm:text-[11px] sm:leading-normal sm:tracking-[0.06em]">
-            <span className="flex min-h-[2.4rem] items-center justify-center rounded-full border border-white/35 bg-white/10 px-1.5 py-1 text-center sm:min-h-0 sm:px-2.5 sm:py-1">
-              Resposta rápida no WhatsApp
-            </span>
-            <span className="flex min-h-[2.4rem] items-center justify-center rounded-full border border-white/35 bg-white/10 px-1.5 py-1 text-center sm:min-h-0 sm:px-2.5 sm:py-1">
-              Avaliação personalizada
-            </span>
-          </div>
+          <ul className="mx-auto mt-6 grid max-w-md list-none grid-cols-2 justify-items-center gap-x-2 gap-y-2 px-2 text-[10px] leading-snug text-white/75 sm:flex sm:max-w-none sm:flex-wrap sm:justify-center sm:gap-x-10 sm:px-0 sm:text-sm sm:text-grayLight">
+            <li className="flex w-full max-w-[10.5rem] items-start justify-center gap-1.5 text-center sm:w-auto sm:max-w-none sm:justify-start sm:text-left">
+              <span
+                className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#58c0f9]"
+                aria-hidden
+              />
+              <span className="font-medium normal-case tracking-normal">
+                Resposta rápida no WhatsApp
+              </span>
+            </li>
+            <li className="flex w-full max-w-[10.5rem] items-start justify-center gap-1.5 text-center sm:w-auto sm:max-w-none sm:justify-start sm:text-left">
+              <span
+                className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#58c0f9]"
+                aria-hidden
+              />
+              <span className="font-medium normal-case tracking-normal">
+                Avaliação personalizada
+              </span>
+            </li>
+          </ul>
 
           <div className="mt-9 grid max-w-xl grid-cols-2 gap-3">
             <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
