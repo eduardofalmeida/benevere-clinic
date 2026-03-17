@@ -18,6 +18,8 @@ const featuredServices = [
     description: 'Protocolos seguros para um sorriso mais claro, mantendo a naturalidade. Resultados visíveis com acompanhamento profissional em cada etapa.',
     icon: 'sun',
     tag: 'Destaque',
+    pageLink: '/clareamento',
+    pageLinkLabel: 'Conheça o clareamento dental',
     image: '/servico-clareamento.png',
     imageAlt: 'Comparativo antes e depois do clareamento dental',
     imageFullCard: true,

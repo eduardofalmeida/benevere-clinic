@@ -31,31 +31,28 @@ function Hero() {
           <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
             Cada detalhe pensado pra você se sentir bem em todas as etapas. 😁
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide text-[#1e334e] shadow-[0_10px_30px_rgba(57,215,255,0.25)] transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
+              className="flex min-h-[3.25rem] items-center justify-center rounded-full border border-white/30 bg-gradient-to-br from-[#1e334e] via-[#245a8a] to-[#58c0f9] px-2 py-2.5 text-center text-[11px] font-bold leading-tight tracking-wide text-white shadow-[0_10px_32px_rgba(30,51,78,0.55),0_0_24px_rgba(88,192,249,0.25)] transition duration-300 hover:brightness-110 active:scale-[0.98] sm:min-h-0 sm:border-transparent sm:bg-white sm:bg-none sm:px-7 sm:py-3 sm:text-sm sm:font-semibold sm:tracking-wide sm:text-[#1e334e] sm:shadow-[0_10px_30px_rgba(57,215,255,0.25)] sm:hover:-translate-y-0.5 sm:hover:bg-grayLight sm:hover:brightness-100 sm:active:scale-100"
             >
               Agendar Consulta
             </a>
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center rounded-full border border-white/70 bg-white/10 px-7 py-3 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
+              className="flex min-h-[3.25rem] items-center justify-center rounded-full border border-white/70 bg-white/10 px-2 py-2.5 text-center text-[11px] font-semibold leading-tight tracking-wide text-white backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 sm:min-h-0 sm:px-7 sm:py-3 sm:text-sm"
             >
               Conhecer Serviços
             </a>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-1.5 text-[10px] font-semibold uppercase tracking-[0.06em] text-grayLight sm:text-[11px]">
-            <span className="rounded-full border border-white/35 bg-white/10 px-2.5 py-1">
+          <div className="mt-6 grid grid-cols-2 gap-1.5 text-[7px] font-semibold uppercase leading-[1.15] tracking-[0.03em] text-grayLight sm:flex sm:flex-wrap sm:gap-1.5 sm:text-[11px] sm:leading-normal sm:tracking-[0.06em]">
+            <span className="flex min-h-[2.4rem] items-center justify-center rounded-full border border-white/35 bg-white/10 px-1.5 py-1 text-center sm:min-h-0 sm:px-2.5 sm:py-1">
               Resposta rápida no WhatsApp
             </span>
-            <span className="rounded-full border border-white/35 bg-white/10 px-2.5 py-1">
-              Atendimento com hora marcada
-            </span>
-            <span className="rounded-full border border-white/35 bg-white/10 px-2.5 py-1">
+            <span className="flex min-h-[2.4rem] items-center justify-center rounded-full border border-white/35 bg-white/10 px-1.5 py-1 text-center sm:min-h-0 sm:px-2.5 sm:py-1">
               Avaliação personalizada
             </span>
           </div>
