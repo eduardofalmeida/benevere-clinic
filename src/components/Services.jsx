@@ -1,39 +1,51 @@
+import { Link } from 'react-router-dom'
 import AnimatedTitle from './AnimatedTitle'
 
-const services = [
+const featuredServices = [
+  {
+    title: 'Implantes dentários',
+    description: 'Reposição de dentes com precisão e conforto, devolvendo função e estética. Tecnologia avançada e planejamento digital para resultados previsíveis e duradouros.',
+    icon: 'implant',
+    tag: 'Destaque',
+    pageLink: '/implantes',
+    pageLinkLabel: 'Conheça o tratamento de implantes',
+    image: '/servico-implantes.png',
+    imageAlt: 'Ilustração 3D: implante dentário no osso com coroa e dentes ao lado',
+    imageFullCard: true,
+  },
+  {
+    title: 'Clareamento dental',
+    description: 'Protocolos seguros para um sorriso mais claro, mantendo a naturalidade. Resultados visíveis com acompanhamento profissional em cada etapa.',
+    icon: 'sun',
+    tag: 'Destaque',
+    image: '/servico-clareamento.png',
+    imageAlt: 'Comparativo antes e depois do clareamento dental',
+    imageFullCard: true,
+  },
+]
+
+const otherServices = [
   {
     title: 'Limpeza e prevenção',
-    description: 'Cuidados periódicos para manter sua saúde bucal em dia e evitar complicações.',
+    description: 'Cuidados periódicos para manter sua saúde bucal em dia.',
     icon: 'spark',
     tag: 'Essencial',
   },
   {
-    title: 'Clareamento dental',
-    description: 'Protocolos seguros para um sorriso mais claro, mantendo a naturalidade.',
-    icon: 'sun',
-    tag: 'Estético',
-  },
-  {
-    title: 'Implantes dentários',
-    description: 'Reposição de dentes com precisão e conforto, devolvendo função e estética.',
-    icon: 'implant',
-    tag: 'Reabilitação',
-  },
-  {
     title: 'Ortodontia',
-    description: 'Alinhamento dental com planejamento personalizado para cada fase do tratamento.',
+    description: 'Alinhamento dental com planejamento personalizado.',
     icon: 'align',
     tag: 'Funcional',
   },
   {
     title: 'Lentes de contato dental',
-    description: 'Correções estéticas sutis para valorizar o formato e a harmonia do sorriso.',
+    description: 'Correções estéticas sutis para harmonia do sorriso.',
     icon: 'smile',
     tag: 'Alta estética',
   },
   {
     title: 'Estética do sorriso',
-    description: 'Soluções integradas para equilibrar beleza, saúde e confiança ao sorrir.',
+    description: 'Soluções integradas para beleza, saúde e confiança.',
     icon: 'star',
     tag: 'Premium',
   },
@@ -100,26 +112,130 @@ function Services() {
         <p className="section-subtitle">Tratamentos completos com estética refinada e precisão clínica.</p>
       </div>
 
-      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {services.map((service) => (
+      <div className="mt-10 grid gap-6 sm:grid-cols-2">
+        {featuredServices.map((service) =>
+          service.imageFullCard && service.image ? (
+            <article
+              key={service.title}
+              data-reveal
+              className="reveal premium-card spotlight-card tech-card relative min-h-[520px] overflow-hidden transition hover:-translate-y-1.5 sm:min-h-[580px]"
+            >
+              <img
+                src={service.image}
+                alt={service.imageAlt ?? ''}
+                className="absolute inset-0 h-full w-full object-cover object-center"
+                loading="lazy"
+              />
+              <div
+                className="absolute inset-0 bg-gradient-to-t from-[#030a12] via-[#030a12]/90 to-[#0a1a2e]/55"
+                aria-hidden
+              />
+              <div className="relative z-10 flex min-h-[520px] flex-col p-8 sm:min-h-[580px] sm:p-10">
+                <div className="flex items-start justify-between">
+                  <div className="inline-flex rounded-full bg-white/95 p-4 text-[#1e334e] shadow-md dark:bg-white/90">
+                    <Icon type={service.icon} />
+                  </div>
+                  <span className="rounded-full border-2 border-white/45 bg-black/25 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white backdrop-blur-sm">
+                    {service.tag}
+                  </span>
+                </div>
+                <div className="mt-auto pt-20">
+                  <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                    {service.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-relaxed text-white/92 sm:text-lg">{service.description}</p>
+                  <div className="mt-6 flex flex-wrap items-center gap-4">
+                    <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#7dd3fc]">
+                      Avaliação personalizada
+                    </p>
+                    {service.pageLink && (
+                      <Link
+                        to={service.pageLink}
+                        className="text-sm font-semibold text-white underline decoration-white/50 underline-offset-4 transition hover:text-[#bae6fd] hover:decoration-[#bae6fd]"
+                      >
+                        {service.pageLinkLabel}
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </article>
+          ) : (
+            <article
+              key={service.title}
+              data-reveal
+              className="reveal premium-card spotlight-card tech-card overflow-hidden transition hover:-translate-y-1.5"
+            >
+              {service.image ? (
+                <div
+                  className={`relative aspect-[16/10] w-full overflow-hidden ${
+                    service.imageContain
+                      ? service.imageBgLight
+                        ? 'bg-[#e8eef3] dark:bg-[#1e293b]'
+                        : 'bg-[#0a1018]'
+                      : 'bg-[#1e334e]/10'
+                  }`}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.imageAlt ?? ''}
+                    className={`h-full w-full object-center ${
+                      service.imageContain ? 'object-contain p-3 sm:p-5' : 'object-cover'
+                    }`}
+                    loading="lazy"
+                  />
+                  {!service.imageContain ? (
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e334e]/35 via-transparent to-transparent" />
+                  ) : null}
+                </div>
+              ) : null}
+              <div className="p-8 sm:p-10">
+                <div className="mb-5 flex items-center justify-between">
+                  <div className="inline-flex rounded-full bg-gradient-to-br from-blueGray/40 to-grayLight/70 p-4 text-navy dark:from-blueGray/25 dark:to-grayLight/30">
+                    <Icon type={service.icon} />
+                  </div>
+                  <span className="rounded-full border-2 border-blueGray/50 bg-blueGray/20 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-navy dark:border-[#58c0f9]/35 dark:bg-[#58c0f9]/15 dark:text-[#e8f4fc]">
+                    {service.tag}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-navy sm:text-2xl">{service.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-grayMedium sm:text-lg">{service.description}</p>
+                <div className="mt-6 flex flex-wrap items-center gap-4">
+                  <p className="text-sm font-semibold uppercase tracking-[0.14em] text-blueGray">
+                    Avaliação personalizada
+                  </p>
+                  {service.pageLink && (
+                    <Link
+                      to={service.pageLink}
+                      className="text-sm font-semibold text-[#0f1f33] underline decoration-[#1e334e]/40 underline-offset-4 transition hover:text-[#2b4768] dark:text-[#7dd3fc] dark:decoration-[#58c0f9]/50 dark:hover:text-[#bae6fd]"
+                    >
+                      {service.pageLinkLabel}
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </article>
+          ),
+        )}
+      </div>
+
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {otherServices.map((service) => (
           <article
             key={service.title}
             data-reveal
-            className="reveal premium-card spotlight-card tech-card p-6 transition hover:-translate-y-1.5"
+            className="reveal premium-card spotlight-card tech-card p-4 transition hover:-translate-y-1 sm:p-5"
           >
-            <div className="mb-4 flex items-center justify-between">
-              <div className="inline-flex rounded-full bg-gradient-to-br from-blueGray/35 to-grayLight/60 p-3 text-navy">
+            <div className="mb-3 flex items-center justify-between">
+              <div className="inline-flex rounded-full bg-gradient-to-br from-blueGray/30 to-grayLight/50 p-2.5 text-navy">
                 <Icon type={service.icon} />
               </div>
-              <span className="rounded-full border border-blue-300/35 bg-blue-100/35 px-3 py-1 text-xs font-semibold text-navy">
+              <span className="rounded-full border border-blueGray/30 bg-blueGray/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-navy">
                 {service.tag}
               </span>
             </div>
-            <h3 className="text-lg font-medium text-navy">{service.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-grayMedium">{service.description}</p>
-            <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-blueGray">
-              Avaliação personalizada
-            </p>
+            <h3 className="text-base font-medium text-navy">{service.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-grayMedium">{service.description}</p>
           </article>
         ))}
       </div>

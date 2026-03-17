@@ -38,7 +38,10 @@ function Icon({ type }) {
 
 function About() {
   return (
-    <section id="sobre" className="parallax-section lux-band border-y border-white/60 bg-white/70 py-16 sm:py-24">
+    <section
+      id="sobre"
+      className="parallax-section lux-band border-y border-white/60 bg-white/90 py-16 dark:border-[#334155] dark:bg-[#1e293b] sm:py-24"
+    >
       <div
         data-parallax
         data-parallax-speed="0.06"
@@ -48,12 +51,12 @@ function About() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div data-reveal className="reveal">
             <AnimatedTitle text="Sobre a Benevere" className="section-title lux-title" accent />
-            <p className="section-subtitle">
+            <p className="mt-4 max-w-3xl text-base font-normal leading-relaxed text-[#0f1f33] sm:text-lg dark:text-[#e8eef4]">
               A Benevere nasceu com o propósito de oferecer odontologia moderna, tecnológica e
               humanizada. Nosso foco é proporcionar saúde, estética e confiança através de
               tratamentos personalizados.
             </p>
-            <p className="mt-5 max-w-2xl text-sm leading-relaxed text-grayMedium sm:text-base">
+            <p className="mt-5 max-w-2xl text-sm font-normal leading-relaxed text-[#1e334e] sm:text-base dark:text-[#cbd5e1]">
               Trabalhamos com diagnóstico digital, planejamento individual e acompanhamento próximo em
               cada etapa. Aqui, cada paciente recebe uma experiência completa: acolhimento,
               previsibilidade e excelência clínica.

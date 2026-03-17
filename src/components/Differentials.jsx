@@ -25,7 +25,10 @@ const differentials = [
 
 function Differentials() {
   return (
-    <section id="experiencia" className="parallax-section lux-band bg-gradient-to-b from-[#dee0df] to-[#eef8ff] py-16 sm:py-24">
+    <section
+      id="experiencia"
+      className="parallax-section lux-band bg-gradient-to-b from-[#dee0df] to-[#eef8ff] py-16 dark:from-[#1e293b] dark:to-[#152535] sm:py-24"
+    >
       <div
         data-parallax
         data-parallax-speed="0.08"
@@ -34,7 +37,9 @@ function Differentials() {
       <div className="container-base">
         <div data-reveal className="reveal">
           <AnimatedTitle text="Por que escolher a Benevere?" className="section-title lux-title" accent />
-          <p className="section-subtitle">Excelência clínica com experiência premium em cada detalhe da jornada.</p>
+          <p className="mt-4 max-w-3xl text-base font-normal leading-relaxed text-[#0f1f33] sm:text-lg dark:text-[#d8e4ef]">
+            Excelência clínica com experiência premium em cada detalhe da jornada.
+          </p>
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

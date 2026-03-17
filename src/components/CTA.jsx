@@ -44,7 +44,7 @@ function CTA() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex btn-primary min-w-[220px] bg-white text-navy hover:bg-grayLight"
+              className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-medium tracking-wide text-[#1e334e] shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
             >
               Agendar pelo WhatsApp
             </a>

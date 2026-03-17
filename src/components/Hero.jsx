@@ -25,18 +25,18 @@ function Hero() {
           </p>
           <AnimatedTitle
             as="h1"
-            text="Planejamento digital, alta precisão e atendimento humano em cada etapa."
+            text="Cuidamos do seu sorriso com atenção de verdade, do começo ao fim."
             className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl"
           />
           <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
-            Do seu primeiro sorriso ao resultado final - cuidado completo para você! 😁
+            Cada detalhe pensado pra você se sentir bem em todas as etapas. 😁
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide text-navy shadow-[0_10px_30px_rgba(57,215,255,0.25)] transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
+              className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold tracking-wide text-[#1e334e] shadow-[0_10px_30px_rgba(57,215,255,0.25)] transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
             >
               Agendar Consulta
             </a>
@@ -48,19 +48,19 @@ function Hero() {
             </a>
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.08em] text-grayLight sm:text-sm">
-            <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1.5">
-              Resposta rapida no WhatsApp
+          <div className="mt-6 flex flex-wrap gap-1.5 text-[10px] font-semibold uppercase tracking-[0.06em] text-grayLight sm:text-[11px]">
+            <span className="rounded-full border border-white/35 bg-white/10 px-2.5 py-1">
+              Resposta rápida no WhatsApp
             </span>
-            <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1.5">
+            <span className="rounded-full border border-white/35 bg-white/10 px-2.5 py-1">
               Atendimento com hora marcada
             </span>
-            <span className="rounded-full border border-white/35 bg-white/10 px-3 py-1.5">
-              Avaliacao personalizada
+            <span className="rounded-full border border-white/35 bg-white/10 px-2.5 py-1">
+              Avaliação personalizada
             </span>
           </div>
 
-          <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
+          <div className="mt-9 grid max-w-xl grid-cols-2 gap-3">
             <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
               <p className="text-2xl font-bold text-white">+12</p>
               <p className="mt-1 text-xs text-grayLight">Anos de atuação</p>
@@ -68,10 +68,6 @@ function Hero() {
             <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
               <p className="text-2xl font-bold text-white">+5 mil</p>
               <p className="mt-1 text-xs text-grayLight">Sorrisos cuidados</p>
-            </div>
-            <div className="rounded-2xl border border-white/30 bg-white/15 p-4 text-center backdrop-blur-sm">
-              <p className="text-2xl font-bold text-white">98%</p>
-              <p className="mt-1 text-xs text-grayLight">Satisfação</p>
             </div>
           </div>
         </div>
@@ -85,12 +81,12 @@ function Hero() {
               className="h-[370px] w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_70px_rgba(31,58,109,0.32)] sm:h-[460px]"
               loading="lazy"
             />
-            <div className="absolute bottom-4 left-4 max-w-xs rounded-2xl border border-white/40 bg-white/85 p-4 shadow-premium backdrop-blur">
-              <p className="text-sm font-semibold text-navy">Atendimento premium, humano e seguro</p>
-              <p className="mt-1 text-xs leading-relaxed text-grayMedium">
-                Estrutura moderna com foco em conforto, biosseguranca e previsibilidade de
-                resultados.
+            <div className="absolute bottom-4 left-4 max-w-xs rounded-2xl border border-navy/20 bg-white p-4 shadow-premium">
+              <p className="text-sm leading-relaxed text-[#1e334e]">
+                &ldquo;Pra mim, cada paciente é único. Meu compromisso é cuidar do seu sorriso com
+                atenção, calma e transparência, em cada etapa do tratamento.&rdquo;
               </p>
+              <p className="mt-2 text-xs font-semibold text-[#1e334e]">— Dr. Diem</p>
             </div>
           </div>
         </div>
