@@ -24,12 +24,12 @@ function CTA() {
         />
         <div className="relative text-center">
           <AnimatedTitle
-            text="Dê o proximo passo para um sorriso de alto padrao."
+            text="Dê o próximo passo para um sorriso de alto padrão."
             className="text-3xl font-semibold tracking-tight text-white drop-shadow-sm sm:text-4xl"
           />
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-white sm:text-base">
-            Atendimento exclusivo, diagnostico preciso e plano personalizado para voce conquistar um
-            sorriso saudavel, funcional e esteticamente natural.
+            Atendimento exclusivo, diagnóstico preciso e plano personalizado para você conquistar um
+            sorriso saudável, funcional e esteticamente natural.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.1em] text-grayLight">
             <span className="cta-capsule rounded-full px-3 py-1.5">Atendimento individual</span>
@@ -37,7 +37,7 @@ function CTA() {
             <span className="cta-capsule rounded-full px-3 py-1.5">Resultados naturais</span>
           </div>
           <p className="mt-6 text-sm font-semibold text-white/90">
-            Retorno rapido no WhatsApp durante horario comercial.
+            Retorno rápido no WhatsApp durante horário comercial.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
@@ -52,7 +52,7 @@ function CTA() {
               href={PHONE_URL}
               className="inline-flex min-w-[220px] items-center justify-center rounded-full border border-white/70 bg-white/10 px-7 py-3 text-sm font-medium tracking-wide text-white transition duration-300 hover:-translate-y-0.5 hover:bg-white/20"
             >
-              Ligar para a clinica
+              Ligar para a clínica
             </a>
           </div>
         </div>

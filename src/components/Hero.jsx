@@ -31,7 +31,7 @@ function Hero() {
           <p className="mt-6 max-w-xl text-base leading-relaxed text-grayLight sm:text-lg">
             Cada detalhe pensado pra você se sentir bem em todas as etapas. 😁
           </p>
-          <div className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
+          <div className="mt-8 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-3">
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -86,7 +86,7 @@ function Hero() {
             <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blueGray/25 blur-2xl" />
             <img
               src="/hero-benevere-real.png"
-              alt="Especialista da Benevere no consultorio"
+              alt="Especialista da Benevere no consultório"
               className="h-[370px] w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_70px_rgba(31,58,109,0.32)] sm:h-[460px]"
               loading="lazy"
             />

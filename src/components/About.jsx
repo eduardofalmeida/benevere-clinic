@@ -65,7 +65,7 @@ function About() {
           <div data-reveal className="reveal">
             <img
               src="/about-benevere-clinic.png"
-              alt="Consultorio Benevere com equipamentos modernos"
+              alt="Consultório Benevere com equipamentos modernos"
               className="h-72 w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_65px_rgba(38,65,120,0.2)] sm:h-80"
               loading="lazy"
             />
