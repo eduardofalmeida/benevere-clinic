@@ -1,7 +1,7 @@
 import AnimatedTitle from './AnimatedTitle'
 
 const WHATSAPP_URL =
-  'https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
+  'https://wa.me/5518997975547?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
 
 function Hero() {
   return (
@@ -96,6 +96,9 @@ function Hero() {
                 atenção, calma e transparência, em cada etapa do tratamento.&rdquo;
               </p>
               <p className="mt-2 text-xs font-semibold text-[#1e334e]">— Dr. Diem</p>
+                <p className="mt-1 text-[11px] font-semibold text-[#1e334e]/80">
+                  CRO/SP: 105.569
+                </p>
             </div>
           </div>
         </div>

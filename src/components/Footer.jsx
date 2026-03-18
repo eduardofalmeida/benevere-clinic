@@ -15,7 +15,7 @@ function Footer() {
         </div>
         <div>
           <p className="font-medium text-[#1e334e]">Telefone</p>
-          <p className="mt-2 text-[#2a3d52]">+55 18 99611-9622</p>
+          <p className="mt-2 text-[#2a3d52]">18 99797-5547</p>
         </div>
         <div>
           <p className="font-medium text-[#1e334e]">Endereço</p>
@@ -23,8 +23,13 @@ function Footer() {
         </div>
         <div>
           <p className="font-medium text-[#1e334e]">Instagram</p>
-          <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="mt-2 inline-block text-[#2a3d52] transition hover:text-[#58c0f9]">
-            @benevere
+          <a
+            href="https://instagram.com/benevere_dentalclinic"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 inline-block text-[#2a3d52] transition hover:text-[#58c0f9]"
+          >
+            @benevere_dentalclinic
           </a>
         </div>
         <div>
@@ -35,7 +40,7 @@ function Footer() {
         <div>
           <p className="font-medium text-[#1e334e]">WhatsApp</p>
           <a
-            href="https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere."
+            href="https://wa.me/5518997975547?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere."
             target="_blank"
             rel="noreferrer"
             className="mt-2 inline-block text-[#2a3d52] transition hover:text-[#58c0f9]"
@@ -44,6 +49,7 @@ function Footer() {
           </a>
         </div>
       </div>
+
       <div className="container-base mt-8 border-t border-[#1e334e]/15 pt-6 text-xs text-[#2a3d52]">
         <p>© {new Date().getFullYear()} Benevere Odontologia. Todos os direitos reservados.</p>
         <div className="mt-2 flex flex-col items-center gap-2 text-center">

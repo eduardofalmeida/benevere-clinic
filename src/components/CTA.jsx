@@ -1,8 +1,8 @@
 import AnimatedTitle from './AnimatedTitle'
 
 const WHATSAPP_URL =
-  'https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
-const PHONE_URL = 'tel:+5518996119622'
+  'https://wa.me/5518997975547?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere.'
+const PHONE_URL = 'tel:+5518997975547'
 
 function CTA() {
   return (

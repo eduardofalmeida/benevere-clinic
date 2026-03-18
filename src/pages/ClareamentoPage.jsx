@@ -5,10 +5,10 @@ import Navbar from '../components/Navbar'
 import WhatsAppButton from '../components/WhatsAppButton'
 
 const WHATSAPP_CLAREAMENTO =
-  'https://wa.me/5518996119622?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20clareamento%20dental%20na%20Benevere.'
+  'https://wa.me/5518997975547?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20clareamento%20dental%20na%20Benevere.'
 
 const WHATSAPP_AVALIACAO =
-  'https://wa.me/5518996119622?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20clareamento%20dental%20na%20Benevere.'
+  'https://wa.me/5518997975547?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20clareamento%20dental%20na%20Benevere.'
 
 const trustItems = [
   { label: 'Protocolos seguros', sub: 'Produtos e concentrações indicadas clinicamente' },
@@ -332,6 +332,9 @@ function ClareamentoPage() {
                   </p>
                   <p className="mt-3 text-sm font-semibold text-[#1e334e] dark:text-[#7dd3fc]">
                     — Dr. Diem · Benevere
+                  </p>
+                  <p className="mt-1 text-[11px] font-semibold text-[#1e334e]/80 dark:text-[#bae6fd]">
+                    CRO/SP: 105.569
                   </p>
                 </div>
               </div>

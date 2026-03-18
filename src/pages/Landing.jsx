@@ -11,6 +11,7 @@ import Navbar from '../components/Navbar'
 import Services from '../components/Services'
 import Testimonials from '../components/Testimonials'
 import WhatsAppButton from '../components/WhatsAppButton'
+import InstagramWidget from '../components/InstagramWidget'
 
 function Landing() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -137,6 +138,9 @@ function Landing() {
         <Testimonials />
         <FAQ />
         <CTA />
+        <div className="container-base mt-10 flex justify-center">
+          <InstagramWidget />
+        </div>
       </main>
       <Footer />
       <WhatsAppButton />
