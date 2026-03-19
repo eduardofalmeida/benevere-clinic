@@ -271,6 +271,14 @@ body {
   color: inherit;
 }
 
+/* Seção Sobre a Benevere: fundo claro com contraste */
+section#sobre {
+  background-color: #ffffff !important;
+}
+html.dark section#sobre {
+  background-color: #1e293b !important;
+}
+
 html.dark body {
   color: #b3c2ce;
   background-color: #0d1826;

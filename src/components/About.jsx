@@ -40,7 +40,10 @@ function About() {
   return (
     <section
       id="sobre"
-      className="border-y border-navy/10 bg-[#f8fafb] py-16 dark:border-navy/20 dark:bg-[#0f172a]/20 sm:py-24"
+      className="border-y border-navy/10 py-16 sm:py-24"
+      style={{
+        backgroundColor: 'var(--about-section-bg, #ffffff)',
+      }}
     >
       <div className="container-base">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
