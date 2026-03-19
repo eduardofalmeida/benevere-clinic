@@ -31,7 +31,7 @@ function WhatsAppButton() {
         <div className="mx-auto flex max-w-md items-center gap-2">
           <a
             href={PHONE_URL}
-            className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full border border-blueGray/40 bg-white px-3 text-xs font-semibold uppercase tracking-[0.08em] text-navy"
+            className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-full border border-blueGray/40 bg-white px-3 text-xs font-semibold uppercase tracking-[0.08em] text-[#1e334e]"
           >
             <PhoneIcon />
             Ligar
