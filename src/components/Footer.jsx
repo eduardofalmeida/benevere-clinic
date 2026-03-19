@@ -54,7 +54,7 @@ function Footer() {
         <p>© {new Date().getFullYear()} Benevere Odontologia. Todos os direitos reservados.</p>
         <div className="mt-2 flex flex-col items-center gap-2 text-center">
           <div>
-            <span className="font-semibold">Créditos:</span> Desenvolvimento pela{' '}
+            Desenvolvimento pela{' '}
             <a
               href="https://www.codity.com.br"
               target="_blank"
