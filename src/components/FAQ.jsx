@@ -25,13 +25,9 @@ const faqs = [
 
 function FAQ() {
   return (
-    <section id="faq" className="parallax-section container-base py-16 sm:py-24">
-      <div
-        data-parallax
-        data-parallax-speed="0.05"
-        className="parallax-orb absolute left-[-45px] top-24 h-40 w-40 rounded-full bg-blueGray/20 blur-3xl"
-      />
-      <div data-reveal className="reveal">
+    <section id="faq" className="border-y border-navy/10 bg-white py-16 dark:border-navy/20 dark:bg-navy/5 sm:py-24">
+      <div className="container-base">
+      <div data-reveal className="reveal break-words">
         <AnimatedTitle text="Perguntas frequentes" className="section-title lux-title" accent />
       </div>
 
@@ -40,14 +36,15 @@ function FAQ() {
           <details
             key={faq.question}
             data-reveal
-            className="reveal premium-card spotlight-card tech-card group p-6 open:border-blue-300/45"
+            className="reveal premium-card spotlight-card tech-card group border-navy/10 bg-white p-6 open:border-blueGray/40 dark:bg-white/95"
           >
-            <summary className="cursor-pointer list-none pr-8 text-base font-semibold text-navy marker:content-['']">
+            <summary className="cursor-pointer list-none pr-8 text-base font-semibold text-navy break-words marker:content-['']">
               {faq.question}
             </summary>
-            <p className="mt-4 text-sm leading-relaxed text-grayMedium">{faq.answer}</p>
+            <p className="mt-4 break-words text-sm leading-relaxed text-grayMedium">{faq.answer}</p>
           </details>
         ))}
+      </div>
       </div>
     </section>
   )

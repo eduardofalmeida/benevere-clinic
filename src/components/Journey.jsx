@@ -25,13 +25,9 @@ const steps = [
 
 function Journey() {
   return (
-    <section className="parallax-section container-base py-16 sm:py-24">
-      <div
-        data-parallax
-        data-parallax-speed="0.06"
-        className="parallax-orb absolute left-[-60px] top-10 h-44 w-44 rounded-full bg-blueGray/20 blur-3xl"
-      />
-      <div data-reveal className="reveal">
+    <section className="border-y border-navy/10 bg-white py-16 dark:border-navy/20 dark:bg-navy/5 sm:py-24">
+      <div className="container-base">
+      <div data-reveal className="reveal break-words">
         <AnimatedTitle text="Como funciona sua jornada na Benevere" className="section-title lux-title" accent />
         <p className="section-subtitle">
           Um processo claro, elegante e seguro para transformar seu sorriso com previsibilidade.
@@ -40,12 +36,13 @@ function Journey() {
 
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {steps.map((step) => (
-          <article key={step.number} data-reveal className="reveal premium-card spotlight-card tech-card p-6">
+          <article key={step.number} data-reveal className="reveal premium-card spotlight-card tech-card border-navy/10 bg-white p-6 dark:bg-white/95">
             <p className="text-xs font-bold tracking-[0.2em] text-blueGray">{step.number}</p>
-            <h3 className="mt-2 text-xl font-semibold text-navy">{step.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-grayMedium">{step.description}</p>
+            <h3 className="mt-2 text-xl font-semibold text-navy break-words">{step.title}</h3>
+            <p className="mt-3 break-words text-sm leading-relaxed text-grayMedium">{step.description}</p>
           </article>
         ))}
+      </div>
       </div>
     </section>
   )

@@ -9,7 +9,7 @@ function CTA() {
     <section id="contato" className="parallax-section container-base py-16 sm:py-24">
       <div
         data-reveal
-        className="reveal grid-pattern relative overflow-hidden rounded-3xl border border-white/35 bg-gradient-to-br from-navy via-[#2b4768] to-[#58c0f9] px-6 py-12 text-white shadow-[0_28px_70px_rgba(30,51,78,0.35)] sm:px-10 sm:py-14"
+        className="reveal grid-pattern relative overflow-hidden rounded-3xl border border-white/35 bg-gradient-to-br from-navy to-blueGray px-6 py-12 text-white shadow-[0_28px_70px_rgba(30,51,78,0.35)] sm:px-10 sm:py-14"
       >
         <div className="absolute inset-0 bg-navy/25" />
         <div
@@ -22,12 +22,12 @@ function CTA() {
           data-parallax-speed="0.06"
           className="hero-orb hero-orb-delayed parallax-orb absolute -left-12 bottom-0 h-28 w-28 rounded-full bg-blueGray/20 blur-2xl"
         />
-        <div className="relative text-center">
+        <div className="relative text-center break-words">
           <AnimatedTitle
             text="Dê o próximo passo para um sorriso de alto padrão."
             className="text-3xl font-semibold tracking-tight text-white drop-shadow-sm sm:text-4xl"
           />
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-white sm:text-base">
+          <p className="mx-auto mt-4 max-w-3xl break-words text-sm leading-relaxed text-white sm:text-base">
             Atendimento exclusivo, diagnóstico preciso e plano personalizado para você conquistar um
             sorriso saudável, funcional e esteticamente natural.
           </p>
@@ -44,7 +44,7 @@ function CTA() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-medium tracking-wide text-[#1e334e] shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
+              className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-medium tracking-wide text-navy shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-grayLight"
             >
               Agendar pelo WhatsApp
             </a>

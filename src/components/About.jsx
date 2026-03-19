@@ -40,23 +40,18 @@ function About() {
   return (
     <section
       id="sobre"
-      className="parallax-section lux-band border-y border-white/60 bg-white/90 py-16 dark:border-[#334155] dark:bg-[#1e293b] sm:py-24"
+      className="border-y border-navy/10 bg-[#f8fafb] py-16 dark:border-navy/20 dark:bg-[#0f172a]/20 sm:py-24"
     >
-      <div
-        data-parallax
-        data-parallax-speed="0.06"
-        className="parallax-orb absolute right-[-60px] top-10 h-52 w-52 rounded-full bg-blueGray/20 blur-3xl"
-      />
       <div className="container-base">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div data-reveal className="reveal">
+          <div data-reveal className="reveal break-words">
             <AnimatedTitle text="Sobre a Benevere" className="section-title lux-title" accent />
-            <p className="mt-4 max-w-3xl text-base font-normal leading-relaxed text-[#0f1f33] sm:text-lg dark:text-[#e8eef4]">
+            <p className="mt-4 max-w-3xl text-base font-normal leading-relaxed text-navy sm:text-lg dark:text-graySoft">
               A Benevere nasceu com o propósito de oferecer odontologia moderna, tecnológica e
               humanizada. Nosso foco é proporcionar saúde, estética e confiança através de
               tratamentos personalizados.
             </p>
-            <p className="mt-5 max-w-2xl text-sm font-normal leading-relaxed text-[#1e334e] sm:text-base dark:text-[#cbd5e1]">
+            <p className="mt-5 max-w-2xl break-words text-sm font-normal leading-relaxed text-grayMedium sm:text-base dark:text-graySoft">
               Trabalhamos com diagnóstico digital, planejamento individual e acompanhamento próximo em
               cada etapa. Aqui, cada paciente recebe uma experiência completa: acolhimento,
               previsibilidade e excelência clínica.
@@ -66,7 +61,7 @@ function About() {
             <img
               src="/about-benevere-clinic.png"
               alt="Consultório Benevere com equipamentos modernos"
-              className="h-72 w-full rounded-3xl border border-white/80 object-cover shadow-[0_24px_65px_rgba(38,65,120,0.2)] sm:h-80"
+              className="h-72 w-full rounded-3xl border border-navy/10 object-cover shadow-lg sm:h-80"
               loading="lazy"
             />
           </div>
@@ -77,12 +72,12 @@ function About() {
             <article
               key={item.title}
               data-reveal
-              className="reveal premium-card spotlight-card tech-card rounded-2xl p-6 transition hover:-translate-y-1"
+              className="reveal premium-card spotlight-card tech-card rounded-2xl border-navy/10 bg-white p-6 transition hover:-translate-y-1 dark:bg-white/95"
             >
-              <div className="mb-4 inline-flex rounded-full bg-gradient-to-br from-blueGray/35 to-grayLight/60 p-3 text-navy">
+              <div className="mb-4 inline-flex rounded-full bg-blueGray/20 p-3 text-navy">
                 <Icon type={item.icon} />
               </div>
-              <h3 className="text-lg font-medium text-navy">{item.title}</h3>
+              <h3 className="text-lg font-medium text-navy break-words">{item.title}</h3>
             </article>
           ))}
         </div>

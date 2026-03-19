@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="border-t border-[#1e334e]/20 bg-[#f5f7f8] py-12">
-      <div className="container-base grid gap-8 text-sm text-[#1e334e] sm:grid-cols-2 lg:grid-cols-6">
+    <footer className="border-t border-[#1e334e]/10 bg-white py-12 [color:#1e334e]">
+      <div className="container-base grid gap-8 text-sm sm:grid-cols-2 lg:grid-cols-6">
         <div>
           <div className="flex items-center gap-3">
             <img
@@ -9,49 +9,49 @@ function Footer() {
               alt="Logo Benevere"
               className="h-9 w-9 object-contain"
             />
-            <p className="text-base font-semibold text-[#1e334e]">Benevere Odontologia</p>
+            <p className="text-base font-bold text-[#0f172a]">Benevere Odontologia</p>
           </div>
-          <p className="mt-2 text-[#2a3d52]">Excelência em saúde e estética do sorriso.</p>
+          <p className="mt-2 font-medium text-[#1e334e]">Excelência em saúde e estética do sorriso.</p>
         </div>
         <div>
-          <p className="font-medium text-[#1e334e]">Telefone</p>
-          <p className="mt-2 text-[#2a3d52]">18 99797-5547</p>
+          <p className="font-semibold uppercase tracking-wide text-[#0f172a]">Telefone</p>
+          <p className="mt-2 font-medium text-[#1e334e]">18 99797-5547</p>
         </div>
         <div>
-          <p className="font-medium text-[#1e334e]">Endereço</p>
-          <p className="mt-2 text-[#2a3d52]">R. Smith Vasconcelos, 711 - Centro, Assis - SP, 19814-010</p>
+          <p className="font-semibold uppercase tracking-wide text-[#0f172a]">Endereço</p>
+          <p className="mt-2 break-words font-medium text-[#1e334e]">R. Smith Vasconcelos, 711 - Centro, Assis - SP, 19814-010</p>
         </div>
         <div>
-          <p className="font-medium text-[#1e334e]">Instagram</p>
+          <p className="font-semibold uppercase tracking-wide text-[#0f172a]">Instagram</p>
           <a
             href="https://instagram.com/benevere_dentalclinic"
             target="_blank"
             rel="noreferrer"
-            className="mt-2 inline-block text-[#2a3d52] transition hover:text-[#58c0f9]"
+            className="mt-2 inline-block font-medium text-[#1e334e] transition hover:text-[#0284c7]"
           >
             @benevere_dentalclinic
           </a>
         </div>
         <div>
-          <p className="font-medium text-[#1e334e]">Horário</p>
-          <p className="mt-2 text-[#2a3d52]">Seg a Sex: 08h às 19h</p>
-          <p className="text-[#2a3d52]">Sáb: 08h às 13h</p>
+          <p className="font-semibold uppercase tracking-wide text-[#0f172a]">Horário</p>
+          <p className="mt-2 font-medium text-[#1e334e]">Seg a Sex: 08h às 19h</p>
+          <p className="font-medium text-[#1e334e]">Sáb: 08h às 13h</p>
         </div>
         <div>
-          <p className="font-medium text-[#1e334e]">WhatsApp</p>
+          <p className="font-semibold uppercase tracking-wide text-[#0f172a]">WhatsApp</p>
           <a
             href="https://wa.me/5518997975547?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20Benevere."
             target="_blank"
             rel="noreferrer"
-            className="mt-2 inline-block text-[#2a3d52] transition hover:text-[#58c0f9]"
+            className="mt-2 inline-block font-medium text-[#1e334e] transition hover:text-[#0284c7]"
           >
             Conversar agora
           </a>
         </div>
       </div>
 
-      <div className="container-base mt-8 border-t border-[#1e334e]/15 pt-6 text-xs text-[#2a3d52]">
-        <p>© {new Date().getFullYear()} Benevere Odontologia. Todos os direitos reservados.</p>
+      <div className="container-base mt-8 border-t border-[#1e334e]/15 pt-6 text-xs text-[#1e334e]">
+        <p className="font-medium">© {new Date().getFullYear()} Benevere Odontologia. Todos os direitos reservados.</p>
         <div className="mt-2 flex flex-col items-center gap-2 text-center">
           <div>
             Desenvolvimento pela{' '}
@@ -59,29 +59,29 @@ function Footer() {
               href="https://www.codity.com.br"
               target="_blank"
               rel="noreferrer"
-              className="transition hover:text-[#58c0f9]"
+              className="font-medium text-[#1e334e] transition hover:text-[#0284c7]"
             >
               Codity Tecnologia
             </a>
           </div>
           <div>
-            <span className="text-[#2a3d52]/70">Site:</span>{' '}
+            <span className="font-medium text-[#1e334e]/90">Site:</span>{' '}
             <a
               href="https://www.codity.com.br"
               target="_blank"
               rel="noreferrer"
-              className="transition hover:text-[#58c0f9]"
+              className="font-medium text-[#1e334e] transition hover:text-[#0284c7]"
             >
               www.codity.com.br
             </a>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-[#2a3d52]/70">Instagram:</span>
+            <span className="font-medium text-[#1e334e]/90">Instagram:</span>
             <a
               href="https://instagram.com/codity.tecnologia"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 transition hover:text-[#58c0f9]"
+              className="inline-flex items-center gap-2 font-medium text-[#1e334e] transition hover:text-[#0284c7]"
             >
               <svg
                 viewBox="0 0 24 24"
