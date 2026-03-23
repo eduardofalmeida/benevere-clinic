@@ -349,6 +349,67 @@ html.dark .accent-char {
   }
 }
 
+@media (max-width: 639px) {
+  body {
+    background-color: #f4f7fb !important;
+    background-image: none !important;
+  }
+
+  .container-base {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Mesmo visual da navbar no desktop */
+  .nav-shell {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.62) !important;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.78), rgba(241, 245, 255, 0.72)) !important;
+    box-shadow: 0 10px 28px rgba(49, 72, 140, 0.08) !important;
+  }
+
+  #sobre,
+  #servicos,
+  #experiencia,
+  #depoimentos,
+  #faq,
+  footer {
+    background: #f7faff !important;
+  }
+
+  .premium-card,
+  .tech-card {
+    background: #ffffff !important;
+    border-color: rgba(30, 51, 78, 0.12) !important;
+    box-shadow: 0 14px 30px rgba(30, 51, 78, 0.1) !important;
+    border-radius: 1.1rem;
+  }
+
+  .section-title,
+  .text-navy {
+    color: #12243b !important;
+  }
+
+  .section-subtitle,
+  .text-grayMedium {
+    color: #4b6075 !important;
+  }
+
+  .text-blueGray,
+  .text-graySoft {
+    color: #2f7fb0 !important;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    min-height: 3rem;
+    border-radius: 9999px;
+  }
+
+  #menu-mobile {
+    border-top-color: rgba(255, 255, 255, 0.62) !important;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.78), rgba(241, 245, 255, 0.72)) !important;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .premium-card,
@@ -364,3 +425,6 @@ html.dark .accent-char {
     transform: none !important;
   }
 }
+
+
+

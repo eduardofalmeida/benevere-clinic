@@ -72,7 +72,8 @@ function Landing() {
     function updateTheme() {
       const hour = new Date().getHours()
       const nightTime = hour >= 19 || hour < 7
-      const shouldUseDark = mediaQuery.matches || nightTime
+      const isMobile = window.innerWidth < 640
+      const shouldUseDark = !isMobile && (mediaQuery.matches || nightTime)
       document.documentElement.classList.toggle('dark', shouldUseDark)
     }
 
